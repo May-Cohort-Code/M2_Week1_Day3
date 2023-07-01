@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    {{#if name}}
+        <h4>Address: {{address.street}}</h4>
+        {{#with address}}
+        {{street}}
+        {{number}}
+        {{/with}}
+
+    <h1>Welcome to the Home Page</h1>
+    <h3>{{name}} is signed in</h3>
+    <h4>and is enrolled in the {{course}} course</h4>
+    {{#each languages}}
+    {{@first}}
+    {{/each}}
+    <img src="{{image}}" alt="">
+    {{else}}
+    <h2>Please log in</h2>
+    {{/if}}
+    {{#unless address}}
+    <h3>Please enter an address</h3>
+    {{/unless}}
+
+
+</body>
+</html>
